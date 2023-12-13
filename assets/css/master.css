@@ -99,7 +99,7 @@ input::placeholder {
 
 .weather-icon {
   width: 150px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .weather h1 {
@@ -128,7 +128,7 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .col {
@@ -171,7 +171,7 @@ input::placeholder {
   }
   .weather-icon {
     width: 100px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
   }
   .weather h1 {
     font-size: 70px;
@@ -193,7 +193,7 @@ input::placeholder {
     align-items: center;
     justify-content: space-around;
     padding: 0 20px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
   .col {
     display: flex;
@@ -226,7 +226,7 @@ input::placeholder {
   .details {
     justify-content: space-around;
     padding: 0;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
   .col img {
     width: 40px;
