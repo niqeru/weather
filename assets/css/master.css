@@ -7,19 +7,10 @@
   transition: all 1s;
 }
 
-.chart-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #temperatureChart {
   width: 100%;
   height: 100%;
 }
-
 
 body {
   background: linear-gradient(135deg, #232931, #15171a);
