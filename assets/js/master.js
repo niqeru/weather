@@ -14,13 +14,14 @@ async function checkWeather(city) {
         let temperature = data.main.temp
 
         if (data.name == 'Novokuznetsk'){
+            // document.querySelector('.chart-container').style.display = 'block'
             document.querySelector(".city").innerHTML = 'Новокузнецк';
             temperature = (temperature < -36 ? temperature : -36.5)
             console.log(temperature)
         }else{
+            // document.querySelector('.chart-container').style.display = 'none'
             document.querySelector(".city").innerHTML = data.name;
         }
-
         document.querySelector(".temp").innerHTML = temperature + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".feels-like").innerHTML = data.main.feels_like;
@@ -101,5 +102,3 @@ const temperatureChart = new Chart(ctx, {
         },
     },
 });
-
-console.log(window.location.href)
