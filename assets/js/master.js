@@ -25,7 +25,7 @@ async function checkWeather(city) {
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".feels-like").innerHTML = data.main.feels_like;
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-        document.querySelector(".country").innerHTML = data.sys.country;
+        // document.querySelector(".country").innerHTML = data.sys.country;
         
         if (data.weather[0].main == "Clouds") {
             weatherIcon.src = "https://github.com/Khyes/12_weather_webapp/blob/main/img/clouds.png?raw=true"
