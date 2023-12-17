@@ -12,19 +12,21 @@ async function checkWeather(city) {
         document.querySelector(".weather").style.display = "none";
     } else {
         let temperature = data.main.temp
+        let feels =  data.main.feels_like
 
         if (data.name == 'Novokuznetsk'){
             // document.querySelector('.chart-container').style.display = 'block'
             document.querySelector(".city").innerHTML = 'Новокузнецк';
-            temperature = (temperature < -36 ? temperature : -36.5)
-            console.log(temperature)
+            temperature = (temperature < -36 ? temperature : -36.3)
+            feels = (feels < -36 ? feels : -36.9)
         }else{
             // document.querySelector('.chart-container').style.display = 'none'
             document.querySelector(".city").innerHTML = data.name;
         }
         document.querySelector(".temp").innerHTML = temperature + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-        document.querySelector(".feels-like").innerHTML = data.main.feels_like;
+
+        document.querySelector(".feels-like").innerHTML = feels;
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
         // document.querySelector(".country").innerHTML = data.sys.country;
         
@@ -59,14 +61,14 @@ searchBox.addEventListener("keypress", (e) => {
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 
 const dates = [];
-const temperatures = [-32, -33, -32.5, -34, -32, -33, -35, -37, -37, -36, -35, -36];
+const temperatures = [-32.4, -32.8, -32.5, -34, -32, -33, -35, -36, -35, -36.3, -35, -36, -35.4, -34.8, -33.5, -33, -33.4, -33, -35, -35, -35, -35.3, -35, -36];
 
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
 before = 35
-for (let i = 0; i < 12; i++){
+for (let i = 0; i < 20; i++){
     dates.push(`${i}:00`)
     res = getRandomArbitrary(before, 38)
     before = res - 1.5
@@ -96,7 +98,7 @@ const temperatureChart = new Chart(ctx, {
             y: {
                 title: {
                     display: true,
-                    text: 'Temperature (°C)',
+                    text: 'Температура (°C)',
                 },
             },
         },
